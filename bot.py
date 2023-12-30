@@ -23,6 +23,7 @@ async def kickall(ctx):
                     await ctx.send(f'Kicked {member.display_name}')
                 except discord.Forbidden:
                     await ctx.send('I do not have kick permissions')
+                    pass
                 except discord.HTTPException as e:
                     await ctx.send(f'Failed to kick {member.display_name}')
             else:
