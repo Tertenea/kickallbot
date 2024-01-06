@@ -18,7 +18,7 @@ async def kickall(ctx):
         return await ctx.send('You do not have the required permissions')    
         
     for member in ctx.guild.members:
-        if member.roles:
+        if len(member.roles:) == 1:
             try:
                 await member.kick(reason = 'Kicking all members without roles')
                 await ctx.send(f'Kicked {member.display_name}')
